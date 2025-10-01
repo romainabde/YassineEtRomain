@@ -8,10 +8,16 @@ function getTasks() {
   return tasks;
 }
 
+function toggleTask(id) {
+  const task = tasks.find(t => t.id === id);
+
+  task.done = !task.done;
+  return task;
+}
 
 function reset() {
   tasks = [];
   nextId = 1;
 }
 
-module.exports = { getTasks, reset };
+module.exports = { getTasks, reset, toggleTask };
