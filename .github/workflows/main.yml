@@ -18,7 +18,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm ci   # plus sûr que npm install sur CI
+        run: npm install
 
       - name: Run tests
-        run: npx jest  # utilise le binaire local sans dépendre du PATH
+        run: npx jest
