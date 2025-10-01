@@ -31,8 +31,11 @@ jobs:
         working-directory: eval-git-ci-js-base
 
       # 5️⃣ Upload des rapports de test
+      # 5️⃣ Upload des rapports de test
       - name: Upload test reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: junit-reports
           path: eval-git-ci-js-base/reports
+
+
