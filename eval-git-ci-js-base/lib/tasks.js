@@ -14,4 +14,8 @@ function reset() {
   nextId = 1;
 }
 
-module.exports = { getTasks, reset };
+function countDone() {
+  return tasks.filter(t => t.done).length;
+}
+
+module.exports = { getTasks, reset, countDone };

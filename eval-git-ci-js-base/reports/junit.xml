@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="1" failures="0" errors="0" time="0.774">
-  <testsuite name="toggleTask" errors="0" failures="0" skipped="0" timestamp="2025-10-01T12:24:49" time="0.667" tests="1">
-    <testcase classname="toggleTask inverse le champ done" name="toggleTask inverse le champ done" time="0.003">
+<testsuites name="jest tests" tests="3" failures="0" errors="0" time="0.796">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-10-01T12:32:47" time="0.691" tests="3">
+    <testcase classname=" initial task list is empty" name=" initial task list is empty" time="0.004">
+    </testcase>
+    <testcase classname="countDone retourne 0 quand aucune tâche" name="countDone retourne 0 quand aucune tâche" time="0.001">
+    </testcase>
+    <testcase classname="countDone compte uniquement les tâches faites" name="countDone compte uniquement les tâches faites" time="0">
     </testcase>
   </testsuite>
 </testsuites>
