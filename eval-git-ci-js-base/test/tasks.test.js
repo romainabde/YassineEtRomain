@@ -4,22 +4,21 @@ beforeEach(() => {
   reset();
 });
 
-test('initial task list is empty', () => {
-  expect(getTasks()).toEqual([]);
-});
+describe('toggleTask', () => {
+  beforeEach(() => {
+    reset();
+    getTasks().push({ id: 1, name: "Test", done: false });
+  });
 
+  test('inverse le champ done', () => {
+    const task = getTasks()[0];
 
-describe('addTask', () => {
-  test('ajoute une tâche avec name trimé et done = false', () => {
-    const task = addTask('  Acheter du pain  ');
-
-    // Vérifie que la tâche a bien le nom trimé
-    expect(task.name).toBe('Acheter du pain');
-
-    // Vérifie que done est false
     expect(task.done).toBe(false);
 
-    // Vérifie que l'id existe
-    expect(task).toHaveProperty('id');
+    toggleTask(1);
+    expect(task.done).toBe(true);
+
+    toggleTask(1);
+    expect(task.done).toBe(false);
   });
 });

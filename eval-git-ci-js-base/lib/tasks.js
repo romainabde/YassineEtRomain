@@ -26,4 +26,4 @@ function addTask(name) {
   return task;
 }
 
-module.exports = { getTasks, reset, addTask };
+module.exports = { getTasks, reset, addTask, toggleTask };
