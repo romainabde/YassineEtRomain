@@ -1,0 +1,38 @@
+name: CI Branche1
+
+on:
+  push:
+    branches: [ "branche1" ]
+  pull_request:
+    branches: [ "branche1" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout
+      - uses: actions/checkout@v4
+
+      # 2️⃣ Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      # 3️⃣ Install dependencies dans le dossier eval-git-ci-js-base
+      - name: Install dependencies
+        run: npm install
+        working-directory: eval-git-ci-js-base
+
+      # 4️⃣ Run tests
+      - name: Run tests
+        run: npm test
+        working-directory: eval-git-ci-js-base
+
+      # 5️⃣ Upload test reports
+      - name: Upload test reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: junit-reports
+          path: eval-git-ci-js-base/reports
