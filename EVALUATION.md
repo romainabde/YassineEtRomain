@@ -9,5 +9,6 @@ Les liens des PR :
 - PR 1 : https://github.com/MaDesOcr/gitcidevA/pull/1
 - PR 2 : https://github.com/MaDesOcr/gitcidevA/pull/5
 - PR 3 : https://github.com/MaDesOcr/gitcidevA/pull/6
+  
 Le workflow est configuré pour lancer les tests automatiquement sur toutes les branches principales et vérifier l’intégrité du code.  
 Ce projet nous a permis de maîtriser la gestion de conflits, les merges, et la mise en place d’une CI fonctionnelle.
