@@ -14,4 +14,16 @@ function reset() {
   nextId = 1;
 }
 
-module.exports = { getTasks, reset };
+function addTask(name) {
+
+  const task = {
+    id: nextId++,          // id unique
+    name: name.trim(),     // trim du nom
+    done: false            // done par défaut
+  };
+
+  tasks.push(task);
+  return task;
+}
+
+module.exports = { getTasks, reset, addTask };
